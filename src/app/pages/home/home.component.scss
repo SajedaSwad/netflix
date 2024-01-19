@@ -42,3 +42,9 @@
     transform: scale(1.09);
     cursor: pointer;
 }
+.largeposter{
+    max-height:300px
+}
+.rowposter::-webkit-scrollbar{
+    display: none;
+}
