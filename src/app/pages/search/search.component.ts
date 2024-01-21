@@ -11,6 +11,7 @@ export class SearchComponent {
   ngOnInit(): void {
     
   }
+  searchResult :any;
   searchForm = new FormGroup({
     'movieName':new FormControl(null)
   });
@@ -18,7 +19,7 @@ export class SearchComponent {
   console.log(this.searchForm.value,"searchForm");
   this.service.getSearchMovie(this.searchForm.value).subscribe((result)=>{
     console.log(result);
-    
+    this.searchResult = result.results
   })
   
  }
